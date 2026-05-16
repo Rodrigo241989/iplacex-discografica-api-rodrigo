@@ -23,7 +23,7 @@ public class ArtistaController {
     }
 
     // POST
-    @PostMapping(value = "/artista",
+    @PostMapping(value = "/artistas",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Artista> HandleInsertArtistaRequest(@RequestBody Artista artista) {
@@ -31,7 +31,7 @@ public class ArtistaController {
     }
 
     // GET BY ID
-    @GetMapping(value = "/artista/{id}",
+    @GetMapping(value = "/artistas/{id}",
         produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Artista> HandleGetArtistaRequest(@PathVariable String id) {
         return artistaRepository.findById(id)
@@ -40,7 +40,7 @@ public class ArtistaController {
     }
 
     // Modificar un artista (PUT)
-    @PutMapping(value = "/artista/{id}",
+    @PutMapping(value = "/artistas/{id}",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Artista> HandleUpdateArtistaRequest(@PathVariable String id, @RequestBody Artista artista) {
@@ -54,7 +54,7 @@ public class ArtistaController {
     }
 
     // Borrar un artista (DELETE)
-    @DeleteMapping("/artista/{id}")
+    @DeleteMapping("/artistas/{id}")
     public ResponseEntity<Void> HandleUpdateArtistaRequest(@PathVariable String id) {
         
         if (!artistaRepository.existsById(id)) {

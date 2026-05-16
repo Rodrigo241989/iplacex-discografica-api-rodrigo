@@ -20,7 +20,7 @@ public class DiscoController {
     private IArtistaRepository artistaRepository;
 
     // POST
-    @PostMapping(value = "/disco",
+    @PostMapping(value = "/discos",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Disco> crear(@RequestBody Disco disco) {
@@ -40,7 +40,7 @@ public class DiscoController {
     }
 
     // GET BY ID
-    @GetMapping(value = "/disco/{id}",
+    @GetMapping(value = "/discos/{id}",
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Disco> obtener(@PathVariable String id) {
         return discoRepository.findById(id)
@@ -49,7 +49,7 @@ public class DiscoController {
     }
 
     // GET DISCOS POR ARTISTA
-    @GetMapping(value = "/artista/{id}/discos",
+    @GetMapping(value = "/artistas/{id}/discos",
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Disco>> obtenerPorArtista(@PathVariable String id) {
         return ResponseEntity.ok(discoRepository.findDiscosByIdArtista(id));

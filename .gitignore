@@ -1,0 +1,38 @@
+# ============================================================
+# .gitignore para proyecto Spring Boot con Gradle
+# ============================================================
+
+# ── Archivos de compilación de Gradle ────────────────────────
+.gradle/
+build/
+bin/
+
+# ── Archivos de IDE (VS Code, IntelliJ, Eclipse) ────────────
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+.settings/
+.classpath
+.project
+.factorypath
+
+# ── Archivos del sistema operativo ───────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Archivos de logs ─────────────────────────────────────────
+*.log
+spring.log
+
+# ── Archivos de configuración local (NO subir credenciales) ─
+application-local.properties
+.env
+
+# ── Wrapper de Gradle (opcional, algunos lo incluyen) ────────
+# Si deseas incluir el wrapper en el repo, comenta estas líneas:
+# !gradle/wrapper/gradle-wrapper.jar
+# !gradlew
+# !gradlew.bat
